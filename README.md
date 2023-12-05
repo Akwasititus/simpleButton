@@ -1,4 +1,4 @@
-# Fancy Containers
+# Simple Button
 
 Simple Button package lets you add custom buttons to your Flutter app.
 
@@ -7,7 +7,7 @@ Simple Button package lets you add custom buttons to your Flutter app.
 1. Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
 ```yaml
 dependencies:
-  fancy_containers: ^0.0.1
+  simple_button: ^0.0.1
 ```
 2. Import the package and use it in your Flutter App.
 ```dart
