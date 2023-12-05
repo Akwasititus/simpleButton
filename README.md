@@ -1,39 +1,74 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Fancy Containers
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+Simple Button package lets you add custom buttons to your Flutter app.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Installation
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+1. Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
+```yaml
+dependencies:
+  fancy_containers: ^0.0.1
+```
+2. Import the package and use it in your Flutter App.
 ```dart
-const like = 'sample';
+import 'package:simplebutton.dart';
 ```
 
-## Additional information
+## Example
+There are a number of properties that you can modify:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+-  buttonName
+- buttonHeight
+- elevation
+- textFontSize
+- buttonColor
+- padding
+- onTap
+- roundedCorners
+- borderRadius
+
+<hr>
+
+<table>
+<tr>
+<td>
+
+```dart
+import 'package:flutter/material.dart';
+
+class Display extends StatelessWidget {
+  const Display({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SimpleButton(
+          splashForegroundColor: Colors.red,
+          buttonName: 'Titus',
+          textFontSize: 20,
+          padding: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.all(10),
+          roundedCorners: true,
+          borderRadius: 30,
+          onTap: () {
+            print('object');
+          },
+          textColor: Colors.blue,
+          buttonColor: Colors.redAccent,
+          buttonHeight: 50,
+          buttonWidth: double.infinity,
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+</td>
+<td>
+<img  src="https://private-user-images.githubusercontent.com/59591232/287887041-511b63bf-3b6e-4389-b079-9520385dabd3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE3Mzk0MzUsIm5iZiI6MTcwMTczOTEzNSwicGF0aCI6Ii81OTU5MTIzMi8yODc4ODcwNDEtNTExYjYzYmYtM2I2ZS00Mzg5LWIwNzktOTUyMDM4NWRhYmQzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMDUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjA1VDAxMTg1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc0MGFlNTMyNmI2Nzk3Yzk4MDZjZWU3NGMxNjg1NmI2MzY5NTVhNTAwM2EyNWUzNmE0MjQ5YjBhNzJmZjQxYjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.rAogD2A2mXhl4K6-tguwPWhwLtvi840XVmjb1PF-3Tw"  alt="">
+</td>
+</tr>
+</table>
